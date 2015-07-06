@@ -36,22 +36,22 @@ Returns the distribution support.
 
 ``` javascript
 dist.support();
-// returns
+// returns [ -Infinity, +Infinity ]
 ```
 
 
 #### dist.mean( [value] )
 
-This method is a setter/getter. If no `value` is provided, returns the distribution `mean`. To set the distribution `mean`,
+Returns the distribution `mean`.
 
 ``` javascript
-dist.mean( 100 );
+dist.mean();
 ```
 
 
 #### dist.variance( [value] )
 
-This method is a setter/getter. If no `value` is provided, returns the distribution `variance`. To set the distribution `variance`,
+Returns the distribution `variance`.
 
 ``` javascript
 dist.variance();
@@ -153,16 +153,6 @@ var quantiles = dist.quantile( probs );
 
 Note: all values must exist on the interval `[0, 1]`. The function returns `NaN` for a value not satisfying this condition.
 
-#### dist.mgf( [t] )
-
-If no argument is provided, returns the moment generating function (MGF) of the distribution. If a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix) is provided, evaluates the MGF for each input element.
-
-``` javascript
-var t = [ 0, 0.5, 1, 1.5, 2 ];
-
-var mgf = dist.mgf( t );
-// returns [...]
-```
 
 ## Examples
 
